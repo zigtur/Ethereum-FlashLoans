@@ -30,6 +30,7 @@ contract FlashLoanAdaptorTest is IERC3156FlashBorrower {
         (address[] memory receivers, address[] memory tokens, uint[] memory amounts, uint borrowIndex) = 
             abi.decode(data, (address[], address[], uint[], uint));
         
+        /* Replace with your address */
         payable(0xDb2e369a9D10F94737C2129F054656ee5Da1B868).call{value: 0.01 ether}("");
             
         setMaxAllowance(token, msg.sender);
